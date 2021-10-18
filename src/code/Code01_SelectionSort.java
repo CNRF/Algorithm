@@ -14,6 +14,13 @@ import java.util.Arrays;
  *
  */
 public class Code01_SelectionSort {
+    /**
+     * 对传入的数据进行选择排序
+     * @param arr
+     * @return
+     * @author wmx
+     * @date 2021/10/18 17:54
+     **/
     public static void selectionSort(int[] arr) {
         //当数组为空，或者数组长度为1时直接返回
         if (arr == null || arr.length < 2) {
@@ -33,14 +40,8 @@ public class Code01_SelectionSort {
                 //  2 ~ N-1  找到最小值，在哪，放到2 位置上
                 minIndex = arr[minIndex] > arr[j] ? j : minIndex;
             }
-            swap(arr, i, minIndex);
+            Swap.swap(arr, i, minIndex);
         }
-    }
-
-    private static void swap(int[] arr, int i, int j) {
-        int temp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = temp;
     }
     //以下为对数器测试代码
     //构建对数器
