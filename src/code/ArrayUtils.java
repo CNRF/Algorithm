@@ -21,13 +21,34 @@ public class ArrayUtils {
      * @date 2021/10/18 17:33
      **/
     public static int[] swap(int[] arr, int i, int j) {
-        int temp=arr[i];
-        arr[i]=arr[j];
-        arr[j]=temp;
+        int temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
         return arr;
     }
+
     /**
-     *  JDK自带排序，验证数组是否排序正确
+     * 通过异或交换数组中两个下标的元素
+     *
+     * @param arr 数组
+     * @param i   数组下标1
+     * @param j   数组下标2
+     * @return int[] 返回交换后的数组元素
+     * @author wmx
+     * @date 2021/10/18 17:33
+     **/
+    public static int[] swap2(int[] arr, int i, int j) {
+
+//        通过异或运算交换
+        arr[i] = arr[i] ^ arr[j];
+        arr[j] = arr[i] ^ arr[j];
+        arr[i] = arr[i] ^ arr[j];
+        return arr;
+    }
+
+    /**
+     * JDK自带排序，验证数组是否排序正确
+     *
      * @param arr 需要排序的数组
      * @return
      * @author wmx
