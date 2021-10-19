@@ -1,12 +1,12 @@
 package code;
 
-import java.util.Arrays;
-
 /**
  * @author wmx
  * @version 1.0
  * @ClassName Code01_SelectionSort
- * @Description 选择排序
+ * @Description 选择排序 时间复杂度为 O(n²)
+ *
+ * https://baike.baidu.com/item/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F/9762418?fr=aladdin
  * 0 ~ N-1  找到最小值，在哪，放到0位置上
  * 1 ~ N-1  找到最小值，在哪，放到1 位置上
  * 2 ~ N-1  找到最小值，在哪，放到2 位置上
@@ -40,72 +40,9 @@ public class Code01_SelectionSort {
                 //  2 ~ N-1  找到最小值，在哪，放到2 位置上
                 minIndex = arr[minIndex] > arr[j] ? j : minIndex;
             }
-            Swap.swap(arr, i, minIndex);
+            ArrayUtils.swap(arr, i, minIndex);
         }
     }
-    //以下为对数器测试代码
-    //构建对数器
-    // for test
-    public static int[] generateRandomArray(int maxSize, int maxValue) {
-        // Math.random()   [0,1)
-        // Math.random() * N  [0,N)
-        // (int)(Math.random() * N)  [0, N-1]
-        int[] arr = new int[(int) ((maxSize + 1) * Math.random())];
-        for (int i = 0; i < arr.length; i++) {
-            // [-? , +?]
-            arr[i] = (int) ((maxValue + 1) * Math.random()) - (int) (maxValue * Math.random());
-        }
-        return arr;
-    }
-
-    // for test
-    public static void printArray(int[] arr) {
-        if (arr == null) {
-            return;
-        }
-        for (int i = 0; i < arr.length; i++) {
-            System.out.print(arr[i] + " ");
-        }
-        System.out.println();
-    }
-
-    // for test
-    public static int[] copyArray(int[] arr) {
-        if (arr == null) {
-            return null;
-        }
-        int[] res = new int[arr.length];
-        for (int i = 0; i < arr.length; i++) {
-            res[i] = arr[i];
-        }
-        return res;
-    }
-
-    // for test
-    public static boolean isEqual(int[] arr1, int[] arr2) {
-        if ((arr1 == null && arr2 != null) || (arr1 != null && arr2 == null)) {
-            return false;
-        }
-        if (arr1 == null && arr2 == null) {
-            return true;
-        }
-        if (arr1.length != arr2.length) {
-            return false;
-        }
-        for (int i = 0; i < arr1.length; i++) {
-            if (arr1[i] != arr2[i]) {
-                return false;
-            }
-        }
-        return true;
-    }
-
-    // for test
-    //JDK自带的排序进行来判定数组是否排序成功
-    public static void comparator(int[] arr) {
-        Arrays.sort(arr);
-    }
-
     // for test
     public static void main(String[] args) {
         int testTime = 10000;
@@ -113,15 +50,15 @@ public class Code01_SelectionSort {
         int maxValue = 100;
         boolean succeed = true;
         for (int i = 0; i < testTime; i++) {
-            int[] arr1 = generateRandomArray(maxSize, maxValue);
-            int[] arr2 = copyArray(arr1);
+            int[] arr1 = ArrayUtils.generateRandomArray(maxSize, maxValue);
+            int[] arr2 = ArrayUtils.copyArray(arr1);
             selectionSort(arr1);
-            comparator(arr2);
-            if (!isEqual(arr1, arr2)) {
+            ArrayUtils.comparator(arr2);
+            if (!ArrayUtils.isEqual(arr1, arr2)) {
                 //打印出出错的数据
                 succeed = false;
-                printArray(arr1);
-                printArray(arr2);
+                ArrayUtils.printArray(arr1);
+                ArrayUtils.printArray(arr2);
                 break;
             }
         }
