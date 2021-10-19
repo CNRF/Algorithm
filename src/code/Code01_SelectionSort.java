@@ -50,15 +50,15 @@ public class Code01_SelectionSort {
         int maxValue = 100;
         boolean succeed = true;
         for (int i = 0; i < testTime; i++) {
-            int[] arr1 = ArrayUtils.generateRandomArray(maxSize, maxValue);
-            int[] arr2 = ArrayUtils.copyArray(arr1);
+            int[] arr = ArrayUtils.generateRandomArray(maxSize, maxValue);
+            int[] arr1 = ArrayUtils.copyArray(arr);
+            int[] arr2 = ArrayUtils.copyArray(arr);
             selectionSort(arr1);
             ArrayUtils.comparator(arr2);
             if (!ArrayUtils.isEqual(arr1, arr2)) {
                 //打印出出错的数据
                 succeed = false;
-                ArrayUtils.printArray(arr1);
-                ArrayUtils.printArray(arr2);
+                ArrayUtils.printArray(arr);
                 break;
             }
         }
