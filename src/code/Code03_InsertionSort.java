@@ -18,7 +18,7 @@ public class Code03_InsertionSort {
      * @author wmx
      * @date 2021/10/19 15:05
      **/
-    public static void InsertionSort(int[] arr) {
+    public static void insertionSort(int[] arr) {
         if (arr == null || arr.length < 2) {
             return;
         }
@@ -40,7 +40,7 @@ public class Code03_InsertionSort {
             int[] arr = ArrayUtils.generateRandomArray(maxSize, maxValue);
             int[] arr1 = ArrayUtils.copyArray(arr);
             int[] arr2 = ArrayUtils.copyArray(arr);
-            InsertionSort(arr1);
+            insertionSort(arr1);
             ArrayUtils.comparator(arr2);
             if (!ArrayUtils.isEqual(arr1, arr2)) {
                 //打印出出错的数据
