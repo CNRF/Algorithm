@@ -8,15 +8,6 @@ package code;
  * @date 2021/10/21 9:22
  */
 public class Code13_DeleteGivenValue {
-    //单链表
-    public static class Node {
-        public int value;
-        public Node next;
-
-        public Node(int data) {
-            value = data;
-        }
-    }
 
     //单链表删除
     public static Node removeValue(Node head, int value) {

@@ -12,16 +12,6 @@ import java.util.List;
  * @date 2021/10/20 16:09
  */
 public class Code11_ReverseList {
-    //单链表结构
-    public static class Node {
-        public int value;
-        //node存放下一个节点的地址信息
-        public Node next;
-
-        public Node(int data) {
-            value = data;
-        }
-    }
 
     /**
      * 传入链表头节点对链表进行翻转之后返回翻转之后的头节点
@@ -49,7 +39,7 @@ public class Code11_ReverseList {
      * 通过数组实现链表翻转
      *
      * @param head 链表头节点
-     * @return {@link code.Code11_ReverseList.Node }
+     * @return {@link Node }
      * @author code.Code11_ReverseList.Node
      * @date 2021/10/20 16:57
      **/
