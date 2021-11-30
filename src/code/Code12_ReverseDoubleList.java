@@ -11,6 +11,17 @@ import java.util.List;
  * @date 2021/10/20 17:33
  */
 public class Code12_ReverseDoubleList {
+    public static class DoubleNode {
+        public int value;
+        //前一个节点
+        public DoubleNode pre;
+        //后一个节点
+        public DoubleNode next;
+
+        public DoubleNode(int data) {
+            value = data;
+        }
+    }
 
     /**
      * 翻转双向链表

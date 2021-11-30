@@ -8,6 +8,15 @@ package code;
  * @date 2021/10/21 9:22
  */
 public class Code13_DeleteGivenValue {
+    public class Node {
+        public int value;
+        //node存放下一个节点的地址信息
+        public Node next;
+
+        public Node(int data) {
+            value = data;
+        }
+    }
 
     //单链表删除
     public static Node removeValue(Node head, int value) {
