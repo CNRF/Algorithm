@@ -7,11 +7,11 @@ import java.util.Stack;
 /**
  * @author wmx
  * @version 1.0
- * @className Code14_DoubleNodeToStackAndQueue
+ * @className Code14_DoubleEndsToStackAndQueue
  * @description 使用双向链表实现队列和栈
  * @date 2021/10/27 10:00
  */
-public class Code14_DoubleNodeToStackAndQueue {
+public class Code14_DoubleEndsToStackAndQueue {
     //双向链表结构
     public static class Node<T> {
         public T value;
