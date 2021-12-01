@@ -56,7 +56,7 @@ public class Code19_GetMax {
     }
 
     public static void main(String[] args) {
-        int testTimes = 100000;
+        int testTimes = 1000000;
         int maxValue = 100;
         int maxSize = 1000;
         boolean success = true;
