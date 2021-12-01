@@ -20,7 +20,7 @@ public class Code20_MergeSort {
         if (L == R) {
             return;
         }
-        int mid = L + ((R - L) >> 2);
+        int mid = L + ((R - L) >> 1);
         process(arr, L, mid);
         process(arr, mid + 1, R);
         merge(arr, L, mid, R);
@@ -127,7 +127,9 @@ public class Code20_MergeSort {
 
     // for test
     public static void main(String[] args) {
-        int testTime = 500000;
+        int[] ints = {4, 3, 2, 6, 7, 2, 7};
+        mergeSort1(ints);
+/*        int testTime = 500000;
         int maxSize = 100;
         int maxValue = 100;
         System.out.println("测试开始");
@@ -143,7 +145,7 @@ public class Code20_MergeSort {
                 break;
             }
         }
-        System.out.println("测试结束");
+        System.out.println("测试结束");*/
     }
 
 
