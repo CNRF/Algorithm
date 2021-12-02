@@ -32,6 +32,7 @@ public class Code20_MergeSort {
         int p1 = L;
         int p2 = M + 1;
         while (p1 <= M && p2 <= R) {
+            //将原数组中L-R之间的数按从小到大放入help数组中
             help[i++] = arr[p1] <= arr[p2] ? arr[p1++] : arr[p2++];
         }
         // 要么p1越界了，要么p2越界了
