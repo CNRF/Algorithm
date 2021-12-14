@@ -66,11 +66,11 @@ public class Code24_CountOfRangeSum {
         for (int i = M + 1; i <= R; i++) {
             long min = arr[i] - upper;
             long max = arr[i] - lower;
-            //查找窗口左边界
+            //查找窗口左边界，同时因为左右数组都已经排好序，不需要回退
             while (windowR <= M && arr[windowR] <= max) {
                 windowR++;
             }
-            //窗口右边界
+            //窗口右边界,右边是开区间
             while (windowL <= M && arr[windowL] < min) {
                 windowL++;
             }
