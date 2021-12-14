@@ -5,6 +5,8 @@ package code;
  * @version 1.0
  * @className Code23_BiggerThanRightTwice
  * @description 比右边大两倍问题
+ * 例子: [1,3,5,9]
+ * 返回:  4    共有[1,3],[1,5],[1,9],[3,9]
  * @date 2021/12/2 10:04
  */
 public class Code23_BiggerThanRightTwice {
