@@ -74,7 +74,7 @@ public class Code24_CountOfRangeSum {
             while (windowL <= M && arr[windowL] < min) {
                 windowL++;
             }
-            ans += Math.max(0, windowR - windowL);
+            ans += windowR - windowL;
         }
         //正常的归并排序
         long[] help = new long[R - L + 1];
