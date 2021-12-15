@@ -5,7 +5,7 @@ package code;
  * @version 1.0
  * @ClassName Code01_SelectionSort
  * @Description 选择排序 时间复杂度为 O(n²)
- *
+ *ps:冒泡排序和选择排序的区别在于冒泡排序每次都会交换（满足大于条件），选择排序则是选出最小值再进行交换
  * https://baike.baidu.com/item/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F/9762418?fr=aladdin
  * 0 ~ N-1  找到最小值，在哪，放到0位置上
  * 1 ~ N-1  找到最小值，在哪，放到1 位置上
