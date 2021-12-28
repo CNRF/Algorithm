@@ -38,9 +38,7 @@ public class Code25_QuickSort {
     }
 
     /**
-     * 快速排序的第一种实现方式，大于目标放左边，小于等于放右边
-     *
-     * @param arr
+     * 大于目标放左边，小于等于放右边
      */
     public static void quickSort1(int[] arr) {
         if (arr == null || arr.length < 2) {
