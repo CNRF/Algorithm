@@ -4,7 +4,7 @@ package Leetcode;
  * @author wmx
  * @version 1.0
  * @className Code334
- * @description
+ * @description https://leetcode-cn.com/problems/increasing-triplet-subsequence/
  * @date 2022/1/12 11:08
  */
 public class Code334 {
