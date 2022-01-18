@@ -8,7 +8,7 @@ package Leetcode;
  * @date 2022/1/17 10:54
  */
 public class Code04 {
-    public double findMedianSortedArrays(int[] nums1, int[] nums2) {
+    public static double findMedianSortedArrays(int[] nums1, int[] nums2) {
         //求出两个数组的总长度
         int total = nums1.length + nums2.length;
         //如果是奇数，则求出中间两个数的平均数
@@ -27,10 +27,10 @@ public class Code04 {
      * @param nums2 数组2
      * @param j     数组2的起始位置
      * @param k     k为第k小的数
-     * @return
+     * @return 两个数组的中位数
      */
-    private int find(int[] nums1, int i, int[] nums2, int j, int k) {
-        //为了方便，我们使nums1的长度小于nums2的长度
+    private static int find(int[] nums1, int i, int[] nums2, int j, int k) {
+        //为了方便，使nums1的剩余长度小于nums2的剩余长度
         if (nums1.length - i > nums2.length - j) {
             return find(nums2, j, nums1, i, k);
         }
@@ -64,5 +64,12 @@ public class Code04 {
             return find(nums1, si, nums2, j, k - (si - i));
         }
 
+    }
+
+    public static void main(String[] args) {
+        int[] nums = {1, 2, 3};
+        int[] nums2 = {4, 5};
+        double medianSortedArrays = findMedianSortedArrays(nums, nums2);
+        System.out.println(medianSortedArrays);
     }
 }
