@@ -19,7 +19,7 @@ public class Code1380 {
     public List<Integer> luckyNumbers (int[][] matrix) {
         int n = matrix.length, m = matrix[0].length;
         for (int i = 0; i < n; i++) {
-            row[i] = 100001;
+            row[i] = 100011;
             for (int j = 0; j < m; j++) {
                 //获取当前行最小值和当前列最大值
                 row[i] = Math.min(row[i], matrix[i][j]);
