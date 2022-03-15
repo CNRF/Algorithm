@@ -18,10 +18,7 @@ public class Code2044 {
     }
 
     private void dfs(int u, int val) {
-        //选U位置的数
-        dfs(u + 1, val);
-        //不选U位置的数
-        dfs(u + 1, val | nums[u]);
+
         //数组最后的位置
         if (u == nums.length) {
             if (val > max) {
@@ -33,6 +30,10 @@ public class Code2044 {
             }
             return;
         }
+        //选U位置的数
+        dfs(u + 1, val);
+        //不选U位置的数
+        dfs(u + 1, val | nums[u]);
     }
 
 }
