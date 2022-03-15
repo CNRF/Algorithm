@@ -8,6 +8,13 @@ package Leetcode;
  * @date 2022/3/15 23:08
  */
 public class Code2044 {
+    public static void main(String[] args) {
+        Code2044 code2044 = new Code2044();
+        int[] ints = {3, 2, 1, 5};
+        int i = code2044.countMaxOrSubsets(ints);
+        System.out.println(i);
+    }
+
     int max = 0, ans = 0;
     int[] nums;
 
@@ -30,9 +37,9 @@ public class Code2044 {
             }
             return;
         }
-        //选U位置的数
+        //此处为不选取数组上u位置的数
         dfs(u + 1, val);
-        //不选U位置的数
+        //此处为选取数组上u位置的数 0|1=1
         dfs(u + 1, val | nums[u]);
     }
 
