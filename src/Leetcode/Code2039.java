@@ -29,10 +29,12 @@ public class Code2039 {
         Arrays.fill(he, -1);
         Arrays.fill(dist, INF);
         int n = patience.length;
+        // 建图（链式前向星）
         for (int[] e : edges) {
             add(e[0], e[1]);
             add(e[1], e[0]);
         }
+        // 计算最短路
         Deque<Integer> d = new ArrayDeque<>();
         d.addLast(0);
         dist[0] = 0;
@@ -45,6 +47,7 @@ public class Code2039 {
                 d.addLast(j);
             }
         }
+        // 计算空闲时间
         int ans = 0;
         for (int i = 1; i < n; i++) {
             int di = dist[i] * 2, t = patience[i];
