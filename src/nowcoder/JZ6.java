@@ -25,8 +25,17 @@ public class JZ6 {
         return printListFromTailToHeadUseStack(listNode);
     }
 
-    //将链表反转之后返回
     public ArrayList<Integer> printListFromTailToHeadReverseList(ListNode listNode) {
+        ArrayList<Integer> list = new ArrayList<>();
+        while (listNode != null) {
+            list.add(0, listNode.val);
+            listNode = listNode.next;
+        }
+        return list;
+    }
+
+    //将链表反转之后返回
+    public ArrayList<Integer> printListFromTailToHeadReverseNode(ListNode listNode) {
         ArrayList<Integer> list = new ArrayList<>();
         if (listNode == null) {
             return list;
